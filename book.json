@@ -1,0 +1,24 @@
+{
+  "title": "GitBook教程",
+  "author": "zhl",
+  "description": "使用gitbook生成的电子书，主要关于gitbook使用教程介绍",
+  "generator": "site",
+  "language": "zh-hans",
+  "links": {
+    "sidebar": {
+      "zhl的在线书籍": "https://book.zhlzzz.com"
+    }
+  },
+  "plugins": [
+    "disqus",
+    "baidu"
+  ],
+  "pluginsConfig": {
+    "disqus": {
+      "shortName": "gitbook"
+    },
+    "baidu": {
+      "token": "f2aa21e56274fea731f801e573a3f23a"
+    }
+  }
+}
