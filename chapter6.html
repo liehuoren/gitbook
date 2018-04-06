@@ -1,20 +1,24 @@
 
 <!DOCTYPE HTML>
-<html lang="" >
+<html lang="zh-hans" >
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>插件扩展 · GitBook</title>
+        <title>插件扩展 · GitBook教程</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
-        
+        <meta name="author" content="zhl">
         
         
     
     <link rel="stylesheet" href="gitbook/style.css">
 
     
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-disqus/plugin.css">
+                
             
                 
                 <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
@@ -71,7 +75,7 @@
         
             
 <div id="book-search-input" role="search">
-    <input type="text" placeholder="Type to search" />
+    <input type="text" placeholder="输入并搜索" />
 </div>
 
             
@@ -82,7 +86,16 @@
 <ul class="summary">
     
     
+    
+        
+        <li>
+            <a href="https://book.zhlzzz.com" target="_blank" class="custom-link">zhl的在线书籍</a>
+        </li>
+    
+    
 
+    
+    <li class="divider"></li>
     
 
     
@@ -200,7 +213,7 @@
 
     <li>
         <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
+            本书使用 GitBook 发布
         </a>
     </li>
 </ul>
@@ -239,6 +252,147 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="&#x63D2;&#x4EF6;&#x6269;&#x5C55;">&#x63D2;&#x4EF6;&#x6269;&#x5C55;</h1>
+<p>Gitbook &#x672C;&#x8EAB;&#x529F;&#x80FD;&#x4E30;&#x5BCC;&#xFF0C;&#x4F46;&#x540C;&#x65F6;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x63D2;&#x4EF6;&#x6765;&#x8FDB;&#x884C;&#x4E2A;&#x6027;&#x5316;&#x5B9A;&#x5236;&#x3002;<a href="https://plugins.gitbook.com/browse" target="_blank">Gitbook &#x63D2;&#x4EF6;</a> &#x91CC;&#x5DF2;&#x7ECF;&#x6709;100&#x591A;&#x4E2A;&#x63D2;&#x4EF6;&#xFF0C;&#x53EF;&#x4EE5;&#x5728; book.json &#x6587;&#x4EF6;&#x7684; plugins &#x548C; pluginsConfig &#x5B57;&#x6BB5;&#x6DFB;&#x52A0;&#x63D2;&#x4EF6;&#x53CA;&#x76F8;&#x5173;&#x914D;&#x7F6E;&#xFF0C;&#x6DFB;&#x52A0;&#x540E;&#x522B;&#x5FD8;&#x4E86;&#x8FDB;&#x884C;&#x5B89;&#x88C5;&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;title&quot;</span>: <span class="hljs-string">&quot;GitBook&#x6559;&#x7A0B;&quot;</span>,
+  <span class="hljs-string">&quot;author&quot;</span>: <span class="hljs-string">&quot;zhl&quot;</span>,
+  <span class="hljs-string">&quot;description&quot;</span>: <span class="hljs-string">&quot;&#x4F7F;&#x7528;gitbook&#x751F;&#x6210;&#x7684;&#x7535;&#x5B50;&#x4E66;&#xFF0C;&#x4E3B;&#x8981;&#x5173;&#x4E8E;gitbook&#x4F7F;&#x7528;&#x6559;&#x7A0B;&#x4ECB;&#x7ECD;&quot;</span>,
+  <span class="hljs-string">&quot;generator&quot;</span>: <span class="hljs-string">&quot;site&quot;</span>,
+  <span class="hljs-string">&quot;language&quot;</span>: <span class="hljs-string">&quot;zh-hans&quot;</span>,
+  <span class="hljs-string">&quot;links&quot;</span>: {
+    <span class="hljs-string">&quot;sidebar&quot;</span>: {
+      <span class="hljs-string">&quot;zhl&#x7684;&#x535A;&#x5BA2;&quot;</span>: <span class="hljs-string">&quot;https://blog.zhlzzz.com&quot;</span>
+    }
+  },
+  <span class="hljs-string">&quot;plugins&quot;</span>: [
+    <span class="hljs-string">&quot;disqus&quot;</span>,
+    <span class="hljs-string">&quot;baidu&quot;</span>
+  ],
+  <span class="hljs-string">&quot;pluginsConfig&quot;</span>: {
+    <span class="hljs-string">&quot;disqus&quot;</span>: {
+      <span class="hljs-string">&quot;shortName&quot;</span>: <span class="hljs-string">&quot;gitbook&quot;</span>
+    },
+    <span class="hljs-string">&quot;baidu&quot;</span>: {
+      <span class="hljs-string">&quot;token&quot;</span>: <span class="hljs-string">&quot;f2aa21e56274fea731f801e573a3f23a&quot;</span>
+    }
+  }
+}
+</code></pre>
+<p>&#x7136;&#x540E;&#x5B89;&#x88C5;&#xFF1A;</p>
+<pre><code class="lang-bash">$ gitbook install ./
+</code></pre>
+<h2 id="&#x5E38;&#x7528;&#x63D2;&#x4EF6;">&#x5E38;&#x7528;&#x63D2;&#x4EF6;</h2>
+<ul>
+<li><p><a href="https://plugins.gitbook.com/plugin/editlink" target="_blank">editlink</a>
+&#x5185;&#x5BB9;&#x9876;&#x90E8;&#x663E;&#x793A; &#x7F16;&#x8F91;&#x672C;&#x9875; &#x94FE;&#x63A5;&#x3002;</p>
+</li>
+<li><p><a href="https://plugins.gitbook.com/plugin/ad" target="_blank">ad</a>
+&#x5728;&#x6BCF;&#x4E2A;&#x9875;&#x9762;&#x9876;&#x90E8;&#x548C;&#x5E95;&#x90E8;&#x6DFB;&#x52A0;&#x5E7F;&#x544A;&#x6216;&#x4EFB;&#x4F55;&#x81EA;&#x5B9A;&#x4E49;&#x5185;&#x5BB9;&#x3002;</p>
+</li>
+<li><p><a href="https://plugins.gitbook.com/plugin/splitter" target="_blank">splitter</a>
+&#x5728;&#x5DE6;&#x4FA7;&#x76EE;&#x5F55;&#x548C;&#x53F3;&#x4FA7;&#x5185;&#x5BB9;&#x4E4B;&#x95F4;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x53EF;&#x4EE5;&#x62D6;&#x62FD;&#x7684;&#x680F;&#xFF0C;&#x7528;&#x6765;&#x8C03;&#x6574;&#x4E24;&#x8FB9;&#x7684;&#x5BBD;&#x5EA6;&#x3002;</p>
+</li>
+<li><p><a href="https://plugins.gitbook.com/plugin/image-captions" target="_blank">image-captions</a>
+&#x6293;&#x53D6;&#x5185;&#x5BB9;&#x4E2D;&#x56FE;&#x7247;&#x7684; alt &#x6216; title &#x5C5E;&#x6027;&#xFF0C;&#x5728;&#x56FE;&#x7247;&#x4E0B;&#x9762;&#x663E;&#x793A;&#x6807;&#x9898;&#x3002;</p>
+</li>
+<li><p><a href="https://plugins.gitbook.com/plugin/github" target="_blank">github</a>
+&#x5728;&#x53F3;&#x4E0A;&#x89D2;&#x663E;&#x793A; github &#x4ED3;&#x5E93;&#x7684;&#x56FE;&#x6807;&#x94FE;&#x63A5;&#x3002;</p>
+</li>
+<li><p><a href="https://plugins.gitbook.com/plugin/anchors" target="_blank">anchors</a>
+&#x6807;&#x9898;&#x5E26;&#x6709; github &#x6837;&#x5F0F;&#x7684;&#x951A;&#x70B9;&#x3002;</p>
+</li>
+<li><p>chart(<a href="https://plugins.gitbook.com/plugin/chart" target="_blank">https://plugins.gitbook.com/plugin/chart</a>)
+&#x4F7F;&#x7528; C3.js &#x56FE;&#x8868;&#x3002;</p>
+</li>
+<li><p><a href="https://plugins.gitbook.com/plugin/styles-sass" target="_blank">styles-sass</a>
+&#x4F7F;&#x7528; SASS &#x66FF;&#x6362; CSS&#x3002;</p>
+</li>
+<li><p><a href="https://plugins.gitbook.com/plugin/styles-less" target="_blank">styles-less</a>
+&#x4F7F;&#x7528; LESS &#x66FF;&#x6362; CSS&#x3002;</p>
+</li>
+<li><p><a href="https://plugins.gitbook.com/plugin/ga" target="_blank">ga</a>
+&#x6DFB;&#x52A0; Google &#x7EDF;&#x8BA1;&#x4EE3;&#x7801;&#x3002;</p>
+</li>
+<li><p><a href="https://plugins.gitbook.com/plugin/disqus" target="_blank">disqus</a>
+&#x6DFB;&#x52A0; disqus &#x8BC4;&#x8BBA;&#x63D2;&#x4EF6;&#x3002;</p>
+</li>
+<li><p><a href="https://plugins.gitbook.com/plugin/sitemap" target="_blank">sitemap</a>
+&#x751F;&#x6210;&#x7AD9;&#x70B9;&#x5730;&#x56FE;&#x3002;</p>
+</li>
+<li><p><a href="https://plugins.gitbook.com/plugin/latex-codecogs" target="_blank">latex-codecogs</a>
+&#x4F7F;&#x7528;&#x6570;&#x5B66;&#x65B9;&#x7A0B;&#x5F0F;&#x3002;</p>
+</li>
+<li><p><a href="https://plugins.gitbook.com/plugin/mermaid" target="_blank">mermaid</a>
+&#x4F7F;&#x7528;&#x6D41;&#x7A0B;&#x56FE;&#x3002;</p>
+</li>
+<li><p><a href="https://plugins.gitbook.com/plugin/book-summary-scroll-position-saver" target="_blank">book-summary-scroll-position-saver</a>
+&#x81EA;&#x52A8;&#x4FDD;&#x5B58;&#x5DE6;&#x4FA7;&#x76EE;&#x5F55;&#x533A;&#x57DF;&#x5BFC;&#x822A;&#x6761;&#x7684;&#x4F4D;&#x7F6E;&#x3002;</p>
+</li>
+<li><p><a href="https://plugins.gitbook.com/plugin/sharing" target="_blank">sharing</a>
+&#x9ED8;&#x8BA4;&#x7684;&#x5206;&#x4EAB;&#x63D2;&#x4EF6;&#x3002;</p>
+</li>
+<li><p><a href="https://plugins.gitbook.com/plugin/fontsettings" target="_blank">fontsettings</a>
+&#x9ED8;&#x8BA4;&#x7684;&#x5B57;&#x4F53;&#x3001;&#x5B57;&#x53F7;&#x3001;&#x989C;&#x8272;&#x8BBE;&#x7F6E;&#x63D2;&#x4EF6;&#x3002;</p>
+</li>
+<li><p><a href="https://plugins.gitbook.com/plugin/search" target="_blank">search</a>
+&#x9ED8;&#x8BA4;&#x641C;&#x7D22;&#x63D2;&#x4EF6;&#x3002;</p>
+</li>
+<li><p><a href="https://plugins.gitbook.com/plugin/tbfed-pagefooter" target="_blank">tbfed-pagefooter</a>
+&#x81EA;&#x5B9A;&#x4E49;&#x9875;&#x811A;&#xFF0C;&#x663E;&#x793A;&#x7248;&#x6743;&#x548C;&#x6700;&#x540E;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#x3002;</p>
+</li>
+<li><p><a href="https://plugins.gitbook.com/plugin/prism" target="_blank">prism</a>
+&#x57FA;&#x4E8E; Prism &#x7684;&#x4EE3;&#x7801;&#x9AD8;&#x4EAE;&#x3002;</p>
+</li>
+<li><p><a href="https://plugins.gitbook.com/plugin/atoc" target="_blank">atoc</a>
+&#x63D2;&#x5165; TOC &#x76EE;&#x5F55;&#x3002;</p>
+</li>
+<li><p><a href="https://plugins.gitbook.com/plugin/ace" target="_blank">ace</a>
+&#x63D2;&#x5165;&#x4EE3;&#x7801;&#x9AD8;&#x4EAE;&#x7F16;&#x8F91;&#x5668;&#x3002;</p>
+</li>
+<li><p><a href="https://plugins.gitbook.com/plugin/highlight" target="_blank">highlight</a>
+&#x9ED8;&#x8BA4;&#x7684;&#x4EE3;&#x7801;&#x9AD8;&#x4EAE;&#x63D2;&#x4EF6;&#xFF0C;&#x901A;&#x5E38;&#x4F1A;&#x4F7F;&#x7528; prism &#x6765;&#x66FF;&#x6362;&#x3002;</p>
+</li>
+<li><p><a href="https://plugins.gitbook.com/plugin/github-buttons" target="_blank">github-buttons</a>
+&#x663E;&#x793A; github &#x4ED3;&#x5E93;&#x7684; star &#x548C; fork &#x6309;&#x94AE;&#x3002;</p>
+</li>
+<li><p><a href="https://plugins.gitbook.com/plugin/sectionx" target="_blank">sectionx</a>
+&#x5206;&#x79BB;&#x5404;&#x4E2A;&#x6BB5;&#x843D;&#xFF0C;&#x5E76;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x5C55;&#x5F00;&#x6536;&#x8D77;&#x7684;&#x6309;&#x94AE;&#x3002;</p>
+</li>
+<li><p><a href="https://plugins.gitbook.com/plugin/mcqx" target="_blank">mcqx</a>
+&#x4F7F;&#x7528;&#x9009;&#x62E9;&#x9898;&#x3002;</p>
+</li>
+<li><p><a href="https://plugins.gitbook.com/plugin/include-codeblock" target="_blank">include-codeblock</a>
+&#x901A;&#x8FC7;&#x5F15;&#x7528;&#x6587;&#x4EF6;&#x63D2;&#x5165;&#x4EE3;&#x7801;&#x3002;</p>
+</li>
+<li><p><a href="https://plugins.gitbook.com/plugin/fbqx" target="_blank">fbqx</a>
+&#x4F7F;&#x7528;&#x586B;&#x7A7A;&#x9898;&#x3002;</p>
+</li>
+<li><p><a href="https://plugins.gitbook.com/plugin/spoiler" target="_blank">spoiler</a>
+&#x9690;&#x85CF;&#x7B54;&#x6848;&#xFF0C;&#x5F53;&#x9F20;&#x6807;&#x5212;&#x8FC7;&#x65F6;&#x624D;&#x663E;&#x793A;&#x3002;</p>
+</li>
+<li><p><a href="https://plugins.gitbook.com/plugin/anchor-navigation" target="_blank">anchor-navigation</a>
+&#x951A;&#x70B9;&#x5BFC;&#x822A;&#x3002;</p>
+</li>
+<li><p><a href="https://plugins.gitbook.com/plugin/youtubex" target="_blank">youtubex</a>
+&#x63D2;&#x5165; YouTube &#x89C6;&#x9891;&#x3002;</p>
+</li>
+<li><p><a href="https://plugins.gitbook.com/plugin/redirect" target="_blank">redirect</a>
+&#x9875;&#x9762;&#x8DF3;&#x8F6C;&#x3002;</p>
+</li>
+<li><p><a href="https://plugins.gitbook.com/plugin/expandable-chapters" target="_blank">expandable-chapters</a>
+&#x6536;&#x8D77;&#x6216;&#x5C55;&#x5F00;&#x7AE0;&#x8282;&#x76EE;&#x5F55;&#x4E2D;&#x7684;&#x7236;&#x8282;&#x70B9;&#x3002;</p>
+</li>
+<li><p><a href="https://plugins.gitbook.com/plugin/baidu" target="_blank">baidu</a>
+&#x4F7F;&#x7528;&#x767E;&#x5EA6;&#x7EDF;&#x8BA1;&#x3002;</p>
+</li>
+<li><p><a href="https://plugins.gitbook.com/plugin/jsfiddle" target="_blank">jsfiddle</a>
+&#x63D2;&#x5165; JSFiddle &#x7EC4;&#x4EF6;&#x3002;</p>
+</li>
+<li><p><a href="https://plugins.gitbook.com/plugin/jsbin" target="_blank">jsbin</a>
+&#x63D2;&#x5165; JSBin &#x7EC4;&#x4EF6;&#x3002;</p>
+</li>
+</ul>
 
                                 
                                 </section>
@@ -282,7 +436,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"插件扩展","level":"1.7","depth":1,"next":{"title":"gitbook.com","level":"1.8","depth":1,"path":"chapter7.md","ref":"chapter7.md","articles":[]},"previous":{"title":"个性化配置","level":"1.6","depth":1,"path":"chapter5.md","ref":"chapter5.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter6.md","mtime":"2018-04-05T15:17:35.064Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-04-06T02:42:58.063Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"插件扩展","level":"1.7","depth":1,"next":{"title":"gitbook.com","level":"1.8","depth":1,"path":"chapter7.md","ref":"chapter7.md","articles":[]},"previous":{"title":"个性化配置","level":"1.6","depth":1,"path":"chapter5.md","ref":"chapter5.md","articles":[]},"dir":"ltr"},"config":{"plugins":["disqus","baidu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"gitbook"},"baidu":{"token":"f2aa21e56274fea731f801e573a3f23a"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"zhl","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"GitBook教程","language":"zh-hans","links":{"sidebar":{"zhl的在线书籍":"https://book.zhlzzz.com"}},"gitbook":"*","description":"使用gitbook生成的电子书，主要关于gitbook使用教程介绍"},"file":{"path":"chapter6.md","mtime":"2018-04-06T05:47:33.508Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-04-06T05:50:05.274Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
@@ -290,6 +444,18 @@
         
     <script src="gitbook/gitbook.js"></script>
     <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-baidu/plugin.js"></script>
+        
     
         
         <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>

@@ -1,20 +1,24 @@
 
 <!DOCTYPE HTML>
-<html lang="" >
+<html lang="zh-hans" >
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>个性化配置 · GitBook</title>
+        <title>个性化配置 · GitBook教程</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
-        
+        <meta name="author" content="zhl">
         
         
     
     <link rel="stylesheet" href="gitbook/style.css">
 
     
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-disqus/plugin.css">
+                
             
                 
                 <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
@@ -71,7 +75,7 @@
         
             
 <div id="book-search-input" role="search">
-    <input type="text" placeholder="Type to search" />
+    <input type="text" placeholder="输入并搜索" />
 </div>
 
             
@@ -82,7 +86,16 @@
 <ul class="summary">
     
     
+    
+        
+        <li>
+            <a href="https://book.zhlzzz.com" target="_blank" class="custom-link">zhl的在线书籍</a>
+        </li>
+    
+    
 
+    
+    <li class="divider"></li>
     
 
     
@@ -200,7 +213,7 @@
 
     <li>
         <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
-            Published with GitBook
+            本书使用 GitBook 发布
         </a>
     </li>
 </ul>
@@ -239,6 +252,143 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="&#x4E2A;&#x6027;&#x5316;&#x914D;&#x7F6E;">&#x4E2A;&#x6027;&#x5316;&#x914D;&#x7F6E;</h1>
+<p>&#x9664;&#x4E86;&#x7F16;&#x8F91;&#x6587;&#x7AE0;&#x4E4B;&#x5916;&#xFF0C;&#x6211;&#x4EEC;&#x8FD8;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x914D;&#x7F6E;<code>book.json</code>&#x6587;&#x4EF6;&#x6765;&#x4FEE;&#x6539;gitbook&#x5728;&#x7F16;&#x8BD1;&#x4E66;&#x7C4D;&#x65F6;&#x7684;&#x4E00;&#x4E9B;&#x4E2A;&#x6027;&#x5316;&#x914D;&#x7F6E;&#x3002;</p>
+<p>gitbook &#x5728;&#x7F16;&#x8BD1;&#x4E66;&#x7C4D;&#x7684;&#x65F6;&#x5019;&#x4F1A;&#x8BFB;&#x53D6;&#x4E66;&#x7C4D;&#x6E90;&#x7801;&#x9876;&#x5C42;&#x76EE;&#x5F55;&#x4E2D;&#x7684; book.js &#x6216;&#x8005; book.json&#xFF0C;&#x8FD9;&#x91CC;&#x4EE5; book.json &#x4E3A;&#x4F8B;&#xFF0C;&#x53C2;&#x8003; gitbook &#x6587;&#x6863; &#x53EF;&#x4EE5;&#x77E5;&#x9053;&#xFF0C;book.json &#x652F;&#x6301;&#x5982;&#x4E0B;&#x914D;&#x7F6E;&#xFF1A;</p>
+<pre><code class="lang-json">{
+    <span class="hljs-comment">// Folders to use for output</span>
+    <span class="hljs-comment">// Caution: it overrides the value from the command line</span>
+    <span class="hljs-comment">// It&apos;s not advised this option in the book.json</span>
+    <span class="hljs-string">&quot;output&quot;</span>: <span class="hljs-literal">null</span>,
+
+    <span class="hljs-comment">// Generator to use for building</span>
+    <span class="hljs-comment">// Caution: it overrides the value from the command line</span>
+    <span class="hljs-comment">// It&apos;s not advised this option in the book.json</span>
+    <span class="hljs-string">&quot;generator&quot;</span>: <span class="hljs-string">&quot;site&quot;</span>,
+
+    <span class="hljs-comment">// Book metadats (somes are extracted from the README by default)</span>
+    <span class="hljs-string">&quot;title&quot;</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-string">&quot;description&quot;</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-string">&quot;isbn&quot;</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-string">&quot;language&quot;</span>: <span class="hljs-string">&quot;en&quot;</span>,
+    <span class="hljs-comment">// For ebook format, the extension to use for generation (default is detected from output extension)</span>
+    <span class="hljs-comment">// &quot;epub&quot;, &quot;pdf&quot;, &quot;mobi&quot;</span>
+    <span class="hljs-comment">// Caution: it overrides the value from the command line</span>
+    <span class="hljs-comment">// It&apos;s not advised this option in the book.json</span>
+    <span class="hljs-string">&quot;extension&quot;</span>: <span class="hljs-literal">null</span>,
+
+    <span class="hljs-comment">// Plugins list, can contain &quot;-name&quot; for removing default plugins</span>
+    <span class="hljs-string">&quot;plugins&quot;</span>: [],
+
+    <span class="hljs-comment">// Global configuration for plugins</span>
+    <span class="hljs-string">&quot;pluginsConfig&quot;</span>: {
+        <span class="hljs-string">&quot;fontSettings&quot;</span>: {
+            <span class="hljs-string">&quot;theme&quot;</span>: <span class="hljs-string">&quot;sepia&quot;</span>, <span class="hljs-string">&quot;night&quot;</span> or <span class="hljs-string">&quot;white&quot;</span>,
+            <span class="hljs-string">&quot;family&quot;</span>: <span class="hljs-string">&quot;serif&quot;</span> or <span class="hljs-string">&quot;sans&quot;</span>,
+            <span class="hljs-string">&quot;size&quot;</span>: <span class="hljs-number">1</span> to <span class="hljs-number">4</span>
+        }
+    },
+
+    <span class="hljs-comment">// Variables for templating</span>
+    <span class="hljs-string">&quot;variables&quot;</span>: {},
+
+    <span class="hljs-comment">// Links in template (null: default, false: remove, string: new value)</span>
+    <span class="hljs-string">&quot;links&quot;</span>: {
+        <span class="hljs-comment">// Custom links at top of sidebar</span>
+        <span class="hljs-string">&quot;sidebar&quot;</span>: {
+            <span class="hljs-string">&quot;Custom link name&quot;</span>: <span class="hljs-string">&quot;https://customlink.com&quot;</span>
+        },
+
+        <span class="hljs-comment">// Sharing links</span>
+        <span class="hljs-string">&quot;sharing&quot;</span>: {
+            <span class="hljs-string">&quot;google&quot;</span>: <span class="hljs-literal">null</span>,
+            <span class="hljs-string">&quot;facebook&quot;</span>: <span class="hljs-literal">null</span>,
+            <span class="hljs-string">&quot;twitter&quot;</span>: <span class="hljs-literal">null</span>,
+            <span class="hljs-string">&quot;weibo&quot;</span>: <span class="hljs-literal">null</span>,
+            <span class="hljs-string">&quot;all&quot;</span>: <span class="hljs-literal">null</span>
+        }
+    },
+
+
+    <span class="hljs-comment">// Options for PDF generation</span>
+    <span class="hljs-string">&quot;pdf&quot;</span>: {
+        <span class="hljs-comment">// Add page numbers to the bottom of every page</span>
+        <span class="hljs-string">&quot;pageNumbers&quot;</span>: <span class="hljs-literal">false</span>,
+
+        <span class="hljs-comment">// Font size for the fiel content</span>
+        <span class="hljs-string">&quot;fontSize&quot;</span>: <span class="hljs-number">12</span>,
+
+        <span class="hljs-comment">// Paper size for the pdf</span>
+        <span class="hljs-comment">// Choices are [u&#x2019;a0&#x2019;, u&#x2019;a1&#x2019;, u&#x2019;a2&#x2019;, u&#x2019;a3&#x2019;, u&#x2019;a4&#x2019;, u&#x2019;a5&#x2019;, u&#x2019;a6&#x2019;, u&#x2019;b0&#x2019;, u&#x2019;b1&#x2019;, u&#x2019;b2&#x2019;, u&#x2019;b3&#x2019;, u&#x2019;b4&#x2019;, u&#x2019;b5&#x2019;, u&#x2019;b6&#x2019;, u&#x2019;legal&#x2019;, u&#x2019;letter&#x2019;]</span>
+        <span class="hljs-string">&quot;paperSize&quot;</span>: <span class="hljs-string">&quot;a4&quot;</span>,
+
+        <span class="hljs-comment">// Margin (in pts)</span>
+        <span class="hljs-comment">// Note: 72 pts equals 1 inch</span>
+        <span class="hljs-string">&quot;margin&quot;</span>: {
+            <span class="hljs-string">&quot;right&quot;</span>: <span class="hljs-number">62</span>,
+            <span class="hljs-string">&quot;left&quot;</span>: <span class="hljs-number">62</span>,
+            <span class="hljs-string">&quot;top&quot;</span>: <span class="hljs-number">36</span>,
+            <span class="hljs-string">&quot;bottom&quot;</span>: <span class="hljs-number">36</span>
+        },
+
+        <span class="hljs-comment">//Header HTML template. Available variables: _PAGENUM_, _TITLE_, _AUTHOR_ and _SECTION_.</span>
+        <span class="hljs-string">&quot;headerTemplate&quot;</span>: <span class="hljs-literal">null</span>,
+
+        <span class="hljs-comment">//Footer HTML template. Available variables: _PAGENUM_, _TITLE_, _AUTHOR_ and _SECTION_.</span>
+        <span class="hljs-string">&quot;footerTemplate&quot;</span>: <span class="hljs-literal">null</span>
+    }
+}
+</code></pre>
+<p>&#x9996;&#x5148;&#xFF0C;&#x5C06;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x653E;&#x5230;&#x4E66;&#x7C4D;&#x9876;&#x5C42;&#x76EE;&#x5F55;&#x4E2D;&#xFF0C;&#x547D;&#x540D;&#x4E3A; book.json&#xFF0C;&#x7136;&#x540E;&#x53BB;&#x9664;&#x6CE8;&#x91CA;&#x8DDF;&#x7A7A;&#x884C;&#xFF0C;&#x6765;&#x4FDD;&#x8BC1;book.json&#x662F;&#x5408;&#x6CD5;&#x7684;&#x914D;&#x7F6E;&#x9879;&#xFF0C;&#x5426;&#x5219;&#x5C06;&#x4F1A;&#x65E0;&#x6548;&#xFF0C;&#x6700;&#x540E;&#x5269;&#x4F59;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;title&quot;</span>: <span class="hljs-literal">null</span>,
+  <span class="hljs-string">&quot;description&quot;</span>: <span class="hljs-literal">null</span>,
+  <span class="hljs-string">&quot;extension&quot;</span>: <span class="hljs-literal">null</span>,
+  <span class="hljs-string">&quot;generator&quot;</span>: <span class="hljs-string">&quot;site&quot;</span>,
+  <span class="hljs-string">&quot;language&quot;</span>: <span class="hljs-string">&quot;zh-hans&quot;</span>,
+  <span class="hljs-string">&quot;isbn&quot;</span>: <span class="hljs-literal">null</span>,
+  <span class="hljs-string">&quot;links&quot;</span>: {
+    <span class="hljs-string">&quot;sharing&quot;</span>: {
+      <span class="hljs-string">&quot;all&quot;</span>: <span class="hljs-literal">null</span>,
+      <span class="hljs-string">&quot;facebook&quot;</span>: <span class="hljs-literal">null</span>,
+      <span class="hljs-string">&quot;google&quot;</span>: <span class="hljs-literal">null</span>,
+      <span class="hljs-string">&quot;twitter&quot;</span>: <span class="hljs-literal">null</span>,
+      <span class="hljs-string">&quot;weibo&quot;</span>: <span class="hljs-literal">null</span>
+    },
+    <span class="hljs-string">&quot;sidebar&quot;</span>: {}
+  },
+  <span class="hljs-string">&quot;output&quot;</span>: <span class="hljs-literal">null</span>,
+  <span class="hljs-string">&quot;pdf&quot;</span>: {
+    <span class="hljs-string">&quot;fontSize&quot;</span>: <span class="hljs-number">12</span>,
+    <span class="hljs-string">&quot;footerTemplate&quot;</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-string">&quot;headerTemplate&quot;</span>: <span class="hljs-literal">null</span>,
+    <span class="hljs-string">&quot;margin&quot;</span>: {
+      <span class="hljs-string">&quot;bottom&quot;</span>: <span class="hljs-number">36</span>,
+      <span class="hljs-string">&quot;left&quot;</span>: <span class="hljs-number">62</span>,
+      <span class="hljs-string">&quot;right&quot;</span>: <span class="hljs-number">62</span>,
+      <span class="hljs-string">&quot;top&quot;</span>: <span class="hljs-number">36</span>
+    },
+    <span class="hljs-string">&quot;pageNumbers&quot;</span>: <span class="hljs-literal">false</span>,
+    <span class="hljs-string">&quot;paperSize&quot;</span>: <span class="hljs-string">&quot;a4&quot;</span>
+  },
+  <span class="hljs-string">&quot;plugins&quot;</span>: [],
+  <span class="hljs-string">&quot;variables&quot;</span>: {}
+}
+</code></pre>
+<p>&#x73B0;&#x5728;&#xFF0C;&#x4FEE;&#x6539;&#x4E00;&#x4E9B;&#x914D;&#x7F6E;&#xFF0C;&#x5C06;&#x5176;&#x4FEE;&#x6539;&#x4E3A;&#x4F60;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;title&quot;</span>: <span class="hljs-string">&quot;GitBook&quot;</span>,
+  <span class="hljs-string">&quot;description&quot;</span>: <span class="hljs-string">&quot;This is a sample book created by gitbook&quot;</span>,
+  <span class="hljs-string">&quot;generator&quot;</span>: <span class="hljs-string">&quot;site&quot;</span>,
+  <span class="hljs-string">&quot;language&quot;</span>: <span class="hljs-string">&quot;zh-hans&quot;</span>,
+  <span class="hljs-string">&quot;links&quot;</span>: {
+    <span class="hljs-string">&quot;sidebar&quot;</span>: {
+       <span class="hljs-string">&quot;zhl&#x7684;&#x535A;&#x5BA2;&quot;</span>: <span class="hljs-string">&quot;https://blog.zhlzzz.com&quot;</span>
+    }
+  }
+}
+</code></pre>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x7C98;&#x8D34;&#x4F60;&#x7684; book.json &#x53BB; <a href="jsonlint.com">jsonlint.com</a> &#x9A8C;&#x8BC1;JSON&#x8BED;&#x6CD5;&#x3002;</p>
+<p>&#x73B0;&#x5728;&#x91CD;&#x65B0;&#x7F16;&#x8BD1;&#x4E0B;&#xFF0C;&#x770B;&#x770B;&#x53D1;&#x751F;&#x4E86;&#x54EA;&#x4E9B;&#x53D8;&#x5316;</p>
 
                                 
                                 </section>
@@ -282,7 +432,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"个性化配置","level":"1.6","depth":1,"next":{"title":"插件扩展","level":"1.7","depth":1,"path":"chapter6.md","ref":"chapter6.md","articles":[]},"previous":{"title":"发布","level":"1.5","depth":1,"path":"chapter4.md","ref":"chapter4.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapter5.md","mtime":"2018-04-05T15:17:35.060Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-04-06T02:42:58.063Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"个性化配置","level":"1.6","depth":1,"next":{"title":"插件扩展","level":"1.7","depth":1,"path":"chapter6.md","ref":"chapter6.md","articles":[]},"previous":{"title":"发布","level":"1.5","depth":1,"path":"chapter4.md","ref":"chapter4.md","articles":[]},"dir":"ltr"},"config":{"plugins":["disqus","baidu"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"gitbook"},"baidu":{"token":"f2aa21e56274fea731f801e573a3f23a"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"zhl","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"GitBook教程","language":"zh-hans","links":{"sidebar":{"zhl的在线书籍":"https://book.zhlzzz.com"}},"gitbook":"*","description":"使用gitbook生成的电子书，主要关于gitbook使用教程介绍"},"file":{"path":"chapter5.md","mtime":"2018-04-06T05:09:40.422Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-04-06T05:50:05.274Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
@@ -290,6 +440,18 @@
         
     <script src="gitbook/gitbook.js"></script>
     <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-baidu/plugin.js"></script>
+        
     
         
         <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
