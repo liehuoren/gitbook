@@ -6,7 +6,7 @@
 
 ## 安装
 
-gitbook的安装非常简单，只需要一步即可完成：
+gitbook的安装非常简单，打开命令行窗口，只需要一步即可完成：
 
 ```bash
 $ npm install gitbook-cli -g

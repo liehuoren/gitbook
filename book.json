@@ -6,19 +6,36 @@
   "language": "zh-hans",
   "links": {
     "sidebar": {
-      "zhl的在线书籍": "https://book.zhlzzz.com"
+      "zhl的在线书籍": "https://book.zhlzzz.com",
+      "zhl的博客": "https://blog.zhlzzz.com"
     }
   },
   "plugins": [
-    "disqus",
-    "baidu"
+    "fontsettings",
+    "sharing",
+    "lunr",
+    "search",
+    "-highlight",
+    "prism",
+    "livereload",
+    "baidu",
+    "multipart"  
   ],
   "pluginsConfig": {
-    "disqus": {
-      "shortName": "gitbook"
+    "prism": {
+      "css": [
+        "prismjs/themes/prism-tomorrow.css"
+      ],
+      "lang": {
+        "flow": "typescript"
+      },
+      "ignore": [
+        "mermaid",
+        "eval-js"
+      ]
     },
     "baidu": {
-      "token": "f2aa21e56274fea731f801e573a3f23a"
+      "token": "d5f3c54a3a319de3efd6d096e3586151"
     }
   }
 }

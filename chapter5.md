@@ -2,7 +2,7 @@
 
 除了编辑文章之外，我们还可以通过配置`book.json`文件来修改gitbook在编译书籍时的一些个性化配置。
 
-gitbook 在编译书籍的时候会读取书籍源码顶层目录中的 book.js 或者 book.json，这里以 book.json 为例，参考 gitbook 文档 可以知道，book.json 支持如下配置：
+gitbook 在编译书籍的时候会读取书籍源码顶层目录中的 `book.js` 或者 `book.json`，这里以 book.json 为例，参考 gitbook 文档 可以知道，book.json 支持如下配置：
 
 ```json
 {
@@ -90,58 +90,40 @@ gitbook 在编译书籍的时候会读取书籍源码顶层目录中的 book.js 
 }
 ```
 
-首先，将这个文件放到书籍顶层目录中，命名为 book.json，然后去除注释跟空行，来保证book.json是合法的配置项，否则将会无效，最后剩余内容如下：
-```json
-{
-  "title": null,
-  "description": null,
-  "extension": null,
-  "generator": "site",
-  "language": "zh-hans",
-  "isbn": null,
-  "links": {
-    "sharing": {
-      "all": null,
-      "facebook": null,
-      "google": null,
-      "twitter": null,
-      "weibo": null
-    },
-    "sidebar": {}
-  },
-  "output": null,
-  "pdf": {
-    "fontSize": 12,
-    "footerTemplate": null,
-    "headerTemplate": null,
-    "margin": {
-      "bottom": 36,
-      "left": 62,
-      "right": 62,
-      "top": 36
-    },
-    "pageNumbers": false,
-    "paperSize": "a4"
-  },
-  "plugins": [],
-  "variables": {}
-}
-```
+首先，在根目录下新建一个`book.json`文件，然后自定义你需要的配置，记得去除注释跟空行，来保证book.json是合法的配置项，否则将会无效。
 
 现在，修改一些配置，将其修改为你的内容，例如：
 ```json
 {
-  "title": "GitBook",
-  "description": "This is a sample book created by gitbook",
+  "title": "GitBook", // 书籍名
+  "description": "This is a sample book created by gitbook", // 书籍描述
   "generator": "site",
-  "language": "zh-hans",
+  "language": "zh-hans", // 语言
   "links": {
     "sidebar": {
-       "zhl的博客": "https://blog.zhlzzz.com"
+       "zhl的博客": "https://blog.zhlzzz.com" // 侧边栏自定义地址
     }
-  }
+  },
+  "plugins": [
+     "fontsettings",
+    "sharing",
+    "lunr",
+    "search",
+    "-highlight",
+    "prism",
+    "livereload",
+    "baidu",
+    "multipart"
+  ], // 插件
+  "pluginsConfig": {
+    "fontSettings": {
+        "theme": "sepia", "night" or "white",
+        "family": "serif" or "sans",
+        "size": 1 to 4
+    }
+  }, // 插件配置
 }
 ```
 你可以粘贴你的 book.json 去 [jsonlint.com](jsonlint.com) 验证JSON语法。
 
-现在重新编译下，看看发生了哪些变化
+现在重新编译下，看看发生了哪些变化，如果你添加了插件，那么请继续看下一部分的详解。
